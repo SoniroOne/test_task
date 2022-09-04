@@ -1,0 +1,242 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-04T17:00:30.725Z",
+    "end": "2022-09-04T17:00:37.617Z",
+    "duration": 6892,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "632a4c40-57f6-41f2-8e75-7eaef906cc3a",
+      "title": "",
+      "fullFile": "cypress/integration/login-page.spec.js",
+      "file": "cypress/integration/login-page.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "32348c5c-7d7c-45d9-9001-b396f391e3fc",
+          "title": "Test Login form component",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify that all alements are present on the page",
+              "fullTitle": "Test Login form component Verify that all alements are present on the page",
+              "timedOut": null,
+              "duration": 640,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const VERIFY_ELEMENTS = [(0, _loginPage.getLoginContainer)(), (0, _loginPage.getLoginIcon)(), (0, _loginPage.getLoginTitle)(), (0, _loginPage.getLoginUserNameFiled)(), (0, _loginPage.getLoginPasswordFiled)(), (0, _loginPage.getLogiButton)()];\n(0, _loginPageAsserts.verifyAllExistingElements)(VERIFY_ELEMENTS);",
+              "err": {},
+              "uuid": "33443000-aa99-4150-9df1-bde3f75d63f5",
+              "parentUUID": "32348c5c-7d7c-45d9-9001-b396f391e3fc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Imitate successful loginsuccessful login",
+              "fullTitle": "Test Login form component Imitate successful loginsuccessful login",
+              "timedOut": null,
+              "duration": 1258,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _loginPageAsserts.login)(ENV_DATA.testUser.username, ENV_DATA.testUser.password);",
+              "err": {},
+              "uuid": "fb0d4a98-fd3d-4ed7-a26e-9ab02952bdc4",
+              "parentUUID": "32348c5c-7d7c-45d9-9001-b396f391e3fc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that title has correct value",
+              "fullTitle": "Test Login form component Verify that title has correct value",
+              "timedOut": null,
+              "duration": 129,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _loginPageAsserts.verifyText)((0, _loginPage.getLoginTitle)());",
+              "err": {},
+              "uuid": "20c690a4-57ae-4b51-a529-5a82e56dfde6",
+              "parentUUID": "32348c5c-7d7c-45d9-9001-b396f391e3fc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that placeholders have correct values",
+              "fullTitle": "Test Login form component Verify that placeholders have correct values",
+              "timedOut": null,
+              "duration": 119,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "[[(0, _loginPage.getLoginUserNameFiled)(), _loginPageConstants.PLACEHOLDER_VALUES.username], [(0, _loginPage.getLoginPasswordFiled)(), _loginPageConstants.PLACEHOLDER_VALUES.password]].forEach(value => {\n  const [elementSelector, elementValue] = value;\n  (0, _loginPageAsserts.verifyPlaceholder)(elementSelector, elementValue);\n});",
+              "err": {},
+              "uuid": "0b8900d0-41e3-4909-bca5-2259939e7bc5",
+              "parentUUID": "32348c5c-7d7c-45d9-9001-b396f391e3fc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test that specific errors are appear when user click login without user name and password data",
+              "fullTitle": "Test Login form component Test that specific errors are appear when user click login without user name and password data",
+              "timedOut": null,
+              "duration": 196,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get((0, _loginPage.getLogiButton)()).should('exist').click();\n[[_loginPageConstants.INDEX_FOR_ERROR_MESSAGE_CONTAINER.usernameError, _loginPageConstants.ERROR_MESSAGES.enterUsername], [_loginPageConstants.INDEX_FOR_ERROR_MESSAGE_CONTAINER.passwordError, _loginPageConstants.ERROR_MESSAGES.enterPassword]].forEach(value => {\n  const [selectorIndex, elementValue] = value;\n  cy.verifyThatElementHasSpecificText((0, _loginPage.getErrorMessage)(selectorIndex), elementValue);\n});",
+              "err": {},
+              "uuid": "7316a0eb-8048-4913-aba7-d87f5bdb394e",
+              "parentUUID": "32348c5c-7d7c-45d9-9001-b396f391e3fc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fill only username field, and verify the error message appear",
+              "fullTitle": "Test Login form component Fill only username field, and verify the error message appear",
+              "timedOut": null,
+              "duration": 588,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _loginPageAsserts.verifyErrorMessageAppear)(_loginPageConstants.VERIFY_PASSWORD_ERROR_MESSAGE);",
+              "err": {},
+              "uuid": "704b7a53-991d-4d0f-882b-bce6795c37ef",
+              "parentUUID": "32348c5c-7d7c-45d9-9001-b396f391e3fc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fill only password field, and verify the error message appear,",
+              "fullTitle": "Test Login form component Fill only password field, and verify the error message appear,",
+              "timedOut": null,
+              "duration": 613,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _loginPageAsserts.verifyErrorMessageAppear)(_loginPageConstants.VERIFY_USERNAME_ERROR_MESSAGE);",
+              "err": {},
+              "uuid": "fca77cb1-19c9-463d-bec8-30cb7bd17003",
+              "parentUUID": "32348c5c-7d7c-45d9-9001-b396f391e3fc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test that user name field doesn't have any specific character limit",
+              "fullTitle": "Test Login form component Test that user name field doesn't have any specific character limit",
+              "timedOut": null,
+              "duration": 1630,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _loginPageAsserts.verifyCharacterSetLimits)((0, _loginPage.getLoginUserNameFiled)());",
+              "err": {},
+              "uuid": "15a99f63-59b6-4a9d-acfc-aee60adc77c9",
+              "parentUUID": "32348c5c-7d7c-45d9-9001-b396f391e3fc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "33443000-aa99-4150-9df1-bde3f75d63f5",
+            "fb0d4a98-fd3d-4ed7-a26e-9ab02952bdc4",
+            "20c690a4-57ae-4b51-a529-5a82e56dfde6",
+            "0b8900d0-41e3-4909-bca5-2259939e7bc5",
+            "7316a0eb-8048-4913-aba7-d87f5bdb394e",
+            "704b7a53-991d-4d0f-882b-bce6795c37ef",
+            "fca77cb1-19c9-463d-bec8-30cb7bd17003",
+            "15a99f63-59b6-4a9d-acfc-aee60adc77c9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5173,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+          "reportDir": "cypress/reports/mocha",
+          "quite": true,
+          "overwrite": true,
+          "html": true,
+          "json": true
+        }
+      },
+      "version": "6.2.0"
+    }
+  }
+}

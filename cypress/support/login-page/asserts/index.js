@@ -1,0 +1,1 @@
+export * from '../asserts/login-page-asserts';

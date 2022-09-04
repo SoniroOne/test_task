@@ -1,0 +1,21 @@
+{
+    "testFiles": ["**/*.spec.js"],
+    "viewportWidth": 1024,
+    "viewportHeight": 920,
+    "screenshotsFolder": "cypress/reports/mochareports/assets",
+    "video": true,
+    "screenshotOnRunFailure": true,
+    "watchForFileChanges": false,
+    "defaultCommandTimeout": 10000,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+      "reporterEnabled": "mochawesome",
+      "mochawesomeReporterOptions": {
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": true,
+        "html": true,
+        "json": true
+      }
+    }
+  }
